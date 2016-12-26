@@ -6,8 +6,40 @@ Licensed under the terms of the MIT license - See [LICENSE.txt](LICENSE.txt)
 
 Master: [![Build Status](https://api.travis-ci.org/mbierlee/poodinis.png?branch=master)](https://travis-ci.org/mbierlee/poodinis) - Dev: [![Build Status](https://api.travis-ci.org/mbierlee/poodinis.png?branch=develop)](https://travis-ci.org/mbierlee/poodinis)
 
-This is a proper-d based value injector for the [Poodinis dependency injection framework](https://github.com/mbierlee/poodinis)
+This is a [proper-d]-based value injector for the [Poodinis dependency injection framework](https://github.com/mbierlee/poodinis)
 
 Requires at least a D 2.068.2 compatible compiler  
 Uses the Phobos standard library  
 Can be built with DUB 1.1.1 or higher
+
+Quickstart
+==========
+```d
+import poodinis;
+import poodinis.valueinjector.properd;
+import properd;
+
+class HttpServer {
+	@Value("http.port")
+	private int port = 80;
+
+	public void start() {
+		import std.stdio, std.conv;
+		writeln("Started server on port " ~ port.to!string);
+	}
+}
+
+void main() {
+	auto container = new shared DependencyContainer();
+	container.register!HttpServer;
+
+	auto properties = parseProperties("http.port = 9000");
+	container.registerProperdProperties(properties);
+
+	auto server = container.resolve!HttpServer;
+	server.start();
+}
+```
+For more information on how to use proper-d, see the [proper-d] github page.
+
+[proper-d]: https://github.com/free-beer/proper-d

@@ -21,6 +21,18 @@
 				"test"
 			],
 			"mainSourceFile": "test/poodinis/testmain.d"
+		},
+		{
+			"name" : "quickstartExample",
+			"description" : "Quickstart example from the readme.",
+			"targetType": "executable",
+			"targetName": "quickstartExample",
+			"sourcePaths": [
+				"example/quickstart"
+			],
+			"importPaths": [
+				"source"
+			]
 		}
 	]
 }
