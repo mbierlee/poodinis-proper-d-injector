@@ -1,0 +1,12 @@
+{
+	"name" : "poodinis-proper-d-injector",
+	"description" : "A proper-d-based value injector for Poodinis.",
+	"homepage": "http://lostmoment.com/open-source/poodinis",
+	"authors": ["Mike Bierlee"],
+	"copyright": "Copyright 2014-2016 Mike Bierlee",
+	"license": "MIT",
+	"dependencies" : {
+		"poodinis": "~>7.0.1",
+		"proper-d": "~>0.0.2"
+	}
+}

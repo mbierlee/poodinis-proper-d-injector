@@ -1,0 +1,10 @@
+/.settings
+/.dub
+/dub.selections.json
+/docs
+/__dummy.html
+/docs.json
+/.buildpath
+/.project
+/.idea
+/*.iml
