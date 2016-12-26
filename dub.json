@@ -8,5 +8,19 @@
 	"dependencies" : {
 		"poodinis": "~>7.0.1",
 		"proper-d": "~>0.0.2"
-	}
+	},
+	"configurations": [
+		{
+			"name": "library",
+			"targetType": "library"
+		},
+		{
+			"name": "unittest",
+			"targetType": "executable",
+			"sourcePaths": [
+				"test"
+			],
+			"mainSourceFile": "test/poodinis/testmain.d"
+		}
+	]
 }
