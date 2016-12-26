@@ -12,8 +12,12 @@ Requires at least a D 2.068.2 compatible compiler
 Uses the Phobos standard library  
 Can be built with DUB 1.1.1 or higher
 
-Quickstart
+Getting Started
 ==========
+###DUB Dependency
+See the [DUB project page](https://code.dlang.org/packages/poodinis-proper-d-injector) for instructions on how to include this value injector into your project. You might also need to add [Poodinis](https://code.dlang.org/packages/poodinis) to your project.
+
+###Quickstart
 ```d
 import poodinis;
 import poodinis.valueinjector.properd;
