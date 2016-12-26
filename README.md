@@ -4,7 +4,7 @@ Version 0.1.0
 Copyright 2014-2016 Mike Bierlee  
 Licensed under the terms of the MIT license - See [LICENSE.txt](LICENSE.txt)
 
-Master: [![Build Status](https://api.travis-ci.org/mbierlee/poodinis.png?branch=master)](https://travis-ci.org/mbierlee/poodinis) - Dev: [![Build Status](https://api.travis-ci.org/mbierlee/poodinis.png?branch=develop)](https://travis-ci.org/mbierlee/poodinis)
+Master: [![Build Status](https://api.travis-ci.org/mbierlee/poodinis-proper-d-injector.png?branch=master)](https://travis-ci.org/mbierlee/poodinis-proper-d-injector) - Dev: [![Build Status](https://api.travis-ci.org/mbierlee/poodinis-proper-d-injector.png?branch=develop)](https://travis-ci.org/mbierlee/poodinis-proper-d-injector)
 
 This is a [proper-d]-based value injector for the [Poodinis dependency injection framework](https://github.com/mbierlee/poodinis)
 
