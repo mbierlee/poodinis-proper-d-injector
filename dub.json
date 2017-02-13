@@ -3,7 +3,7 @@
 	"description" : "A proper-d-based value injector for Poodinis.",
 	"homepage": "http://lostmoment.com/open-source/poodinis",
 	"authors": ["Mike Bierlee"],
-	"copyright": "Copyright 2014-2016 Mike Bierlee",
+	"copyright": "Copyright 2014-2017 Mike Bierlee",
 	"license": "MIT",
 	"dependencies" : {
 		"poodinis": "~>8.0.0",
