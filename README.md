@@ -14,10 +14,10 @@ Can be built with DUB 1.1.1 or higher
 
 Getting Started
 ==========
-###DUB Dependency
+### DUB Dependency
 See the [DUB project page](https://code.dlang.org/packages/poodinis-proper-d-injector) for instructions on how to include this value injector into your project. You might also need to add [Poodinis](https://code.dlang.org/packages/poodinis) to your project.
 
-###Quickstart
+### Quickstart
 ```d
 import poodinis;
 import poodinis.valueinjector.properd;
