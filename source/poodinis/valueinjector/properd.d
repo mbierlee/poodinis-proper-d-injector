@@ -3,7 +3,7 @@
  *
  * Authors:
  *  Mike Bierlee, m.bierlee@lostmoment.com
- * Copyright: 2014-2017 Mike Bierlee
+ * Copyright: 2014-2018 Mike Bierlee
  * License:
  *  This software is licensed under the terms of the MIT license.
  *  The full terms of the license can be found in the LICENSE file.
@@ -16,19 +16,19 @@ import poodinis;
 import properd;
 
 class ProperdValueInjector(Type) : ValueInjector!Type {
-	private string[string] properties;
+    private string[string] properties;
 
-	this(string[string] properties) {
-		this.properties = properties;
-	}
+    this(string[string] properties) {
+        this.properties = properties;
+    }
 
-	public override Type get(string key) {
-		if (!(key in properties)) {
-			throw new ValueNotAvailableException(key);
-		}
+    public override Type get(string key) {
+        if (!(key in properties)) {
+            throw new ValueNotAvailableException(key);
+        }
 
-		return properties.as!Type(key);
-	}
+        return properties.as!Type(key);
+    }
 }
 
 alias ProperdIntValueInjector = ProperdValueInjector!int;
@@ -37,8 +37,8 @@ alias ProperdStringValueInjector = ProperdValueInjector!string;
 alias ProperdBoolValueInjector = ProperdValueInjector!bool;
 
 public void registerProperdProperties(shared(DependencyContainer) container, string[string] properties) {
-	container.register!(ValueInjector!int, ProperdIntValueInjector).existingInstance(new ProperdIntValueInjector(properties));
-	container.register!(ValueInjector!float, ProperdFloatValueInjector).existingInstance(new ProperdFloatValueInjector(properties));
-	container.register!(ValueInjector!string, ProperdStringValueInjector).existingInstance(new ProperdStringValueInjector(properties));
-	container.register!(ValueInjector!bool, ProperdBoolValueInjector).existingInstance(new ProperdBoolValueInjector(properties));
+    container.register!(ValueInjector!int, ProperdIntValueInjector).existingInstance(new ProperdIntValueInjector(properties));
+    container.register!(ValueInjector!float, ProperdFloatValueInjector).existingInstance(new ProperdFloatValueInjector(properties));
+    container.register!(ValueInjector!string, ProperdStringValueInjector).existingInstance(new ProperdStringValueInjector(properties));
+    container.register!(ValueInjector!bool, ProperdBoolValueInjector).existingInstance(new ProperdBoolValueInjector(properties));
 }
