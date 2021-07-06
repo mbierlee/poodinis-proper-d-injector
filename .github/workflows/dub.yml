@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  schedule:
+    - cron: '45 6 1 * *'
+  push:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # Make sure the latest versions of dub and ldc work on all platforms
+  build-latest:
+    name: ${{ matrix.compiler }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        compiler:
+          - dmd-latest
+          - ldc-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install D ${{ matrix.compiler }}
+        uses: dlang-community/setup-dlang@v1
+        with:
+          compiler: ${{ matrix.compiler }}
+
+      - name: Build library
+        run: dub build --build=release --config=library
+
+      - name: Build unittest
+        run: dub test --build=unittest --config=unittest
+
+      - name: Build examples  
+        run: |
+          dub run --build=release --config=quickstartExample
+
+  # On Ubuntu we can use GDC (so keep working for D version 2.076)
+  gdc-latest:
+    name: GDC on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install DMD (so dub is available)
+        uses: dlang-community/setup-dlang@v1
+        with:
+          compiler: dmd-latest
+
+      - name: Install GDC
+        run: |
+          sudo apt-get update
+          sudo apt-get install gdc -y
+          gdc --version
+
+      - name: Build library
+        env:
+          DC: gdc
+        run: dub build --compiler=gdc --build=release --config=library
+
+      - name: Build unittest
+        env:
+          DC: gdc
+        run: dub test --compiler=gdc --build=unittest --config=unittest
+
+      - name: Build examples
+        env:
+          DC: gdc
+        run: |
+          dub run --compiler=gdc --build=release --config=quickstartExample
