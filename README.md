@@ -4,7 +4,7 @@ Version 1.0.0
 Copyright 2014-2021 Mike Bierlee  
 Licensed under the terms of the MIT license - See [LICENSE.txt](LICENSE.txt)
 
-[![DUB Package](https://img.shields.io/dub/v/poodinis-proper-d-injector.svg)](https://code.dlang.org/packages/poodinis-proper-d-injector) [![CI](https://github.com/mbierlee/poodinis/actions/workflows/dub.yml/badge.svg)](https://github.com/mbierlee/poodinis-proper-d-injector/actions/workflows/dub.yml)
+[![DUB Package](https://img.shields.io/dub/v/poodinis-proper-d-injector.svg)](https://code.dlang.org/packages/poodinis-proper-d-injector) [![CI](https://github.com/mbierlee/poodinis-proper-d-injector/actions/workflows/dub.yml/badge.svg)](https://github.com/mbierlee/poodinis-proper-d-injector/actions/workflows/dub.yml)
 
 This is a [proper-d]-based value injector for the [Poodinis dependency injection framework](https://github.com/mbierlee/poodinis)
 
