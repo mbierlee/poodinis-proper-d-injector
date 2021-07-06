@@ -1,6 +1,6 @@
 Proper-d-based value injector for Poodinis
 =======================================
-Version 0.1.0  
+Version 1.0.0  
 Copyright 2014-2021 Mike Bierlee  
 Licensed under the terms of the MIT license - See [LICENSE.txt](LICENSE.txt)
 
