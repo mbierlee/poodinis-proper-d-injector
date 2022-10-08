@@ -1,6 +1,5 @@
 /.settings
 /.dub
-/dub.selections.json
 /docs
 /__dummy.html
 /docs.json
@@ -10,5 +9,6 @@
 /*.iml
 /poodinis-proper-d-injector.exe
 /poodinis-proper-d-injector.lib
+/poodinis-proper-d-injector.pdb
 /quickstartExample.exe
 /classes

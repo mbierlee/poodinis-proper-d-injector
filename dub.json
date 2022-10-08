@@ -1,38 +1,32 @@
 {
-	"name" : "poodinis-proper-d-injector",
-	"description" : "A proper-d-based value injector for Poodinis.",
-	"homepage": "http://lostmoment.com/open-source/poodinis",
-	"authors": ["Mike Bierlee"],
-	"copyright": "Copyright 2014-2022 Mike Bierlee",
-	"license": "MIT",
-	"dependencies" : {
-		"poodinis": "~>8.0",
-		"proper-d": "~>0.0.2"
-	},
-	"configurations": [
-		{
-			"name": "library",
-			"targetType": "library"
-		},
-		{
-			"name": "unittest",
-			"targetType": "executable",
-			"sourcePaths": [
-				"test"
-			],
-			"mainSourceFile": "test/poodinis/testmain.d"
-		},
-		{
-			"name" : "quickstartExample",
-			"description" : "Quickstart example from the readme.",
-			"targetType": "executable",
-			"targetName": "quickstartExample",
-			"sourcePaths": [
-				"example/quickstart"
-			],
-			"importPaths": [
-				"source"
-			]
-		}
-	]
+  "name": "poodinis-proper-d-injector",
+  "description": "A proper-d-based value injector for Poodinis.",
+  "homepage": "http://lostmoment.com/open-source/poodinis",
+  "authors": ["Mike Bierlee"],
+  "copyright": "Copyright 2014-2022 Mike Bierlee",
+  "license": "MIT",
+  "dependencies": {
+    "poodinis": "~>8.1",
+    "proper-d": "~>0.0.2"
+  },
+  "configurations": [
+    {
+      "name": "library",
+      "targetType": "library"
+    },
+    {
+      "name": "unittest",
+      "targetType": "executable",
+      "sourcePaths": ["test"],
+      "mainSourceFile": "test/poodinis/testmain.d"
+    },
+    {
+      "name": "quickstartExample",
+      "description": "Quickstart example from the readme.",
+      "targetType": "executable",
+      "targetName": "quickstartExample",
+      "sourcePaths": ["example/quickstart"],
+      "importPaths": ["source"]
+    }
+  ]
 }
