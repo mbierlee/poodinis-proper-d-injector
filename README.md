@@ -8,7 +8,7 @@ Licensed under the terms of the MIT license - See [LICENSE.txt](LICENSE.txt)
 
 This is a [proper-d]-based value injector for the [Poodinis dependency injection framework](https://github.com/mbierlee/poodinis)
 
-Requires at least a D 2.068.2 compatible compiler  
+Requires at least a D 2.086.1 compatible compiler  
 Uses the Phobos standard library  
 
 # Getting Started
