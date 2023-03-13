@@ -1,6 +1,6 @@
-Proper-d-based value injector for Poodinis
-=======================================
-Version 1.0.0  
+# Proper-d-based value injector for Poodinis
+
+Version 2.0.0  
 Copyright 2014-2023 Mike Bierlee  
 Licensed under the terms of the MIT license - See [LICENSE.txt](LICENSE.txt)
 
@@ -10,14 +10,15 @@ This is a [proper-d]-based value injector for the [Poodinis dependency injection
 
 Requires at least a D 2.068.2 compatible compiler  
 Uses the Phobos standard library  
-Can be built with DUB 1.1.1 or higher
 
-Getting Started
-==========
+# Getting Started
+
 ### DUB Dependency
+
 See the [DUB project page](https://code.dlang.org/packages/poodinis-proper-d-injector) for instructions on how to include this value injector into your project. You might also need to add [Poodinis](https://code.dlang.org/packages/poodinis) to your project.
 
 ### Quickstart
+
 ```d
 import poodinis;
 import poodinis.valueinjector.properd;
@@ -44,6 +45,7 @@ void main() {
 	server.start();
 }
 ```
+
 For more information on how to use proper-d, see the [proper-d] github page.
 
 [proper-d]: https://github.com/free-beer/proper-d
