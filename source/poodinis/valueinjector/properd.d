@@ -22,7 +22,7 @@ class ProperdValueInjector(Type) : ValueInjector!Type {
         this.properties = properties;
     }
 
-    public override Type get(string key) {
+    override Type get(string key) {
         if (!(key in properties)) {
             throw new ValueNotAvailableException(key);
         }
@@ -36,7 +36,7 @@ alias ProperdFloatValueInjector = ProperdValueInjector!float;
 alias ProperdStringValueInjector = ProperdValueInjector!string;
 alias ProperdBoolValueInjector = ProperdValueInjector!bool;
 
-public void registerProperdProperties(shared(DependencyContainer) container, string[string] properties) {
+void registerProperdProperties(shared(DependencyContainer) container, string[string] properties) {
     container.register!(ValueInjector!int, ProperdIntValueInjector).existingInstance(new ProperdIntValueInjector(properties));
     container.register!(ValueInjector!float, ProperdFloatValueInjector).existingInstance(new ProperdFloatValueInjector(properties));
     container.register!(ValueInjector!string, ProperdStringValueInjector).existingInstance(new ProperdStringValueInjector(properties));

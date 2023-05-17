@@ -28,7 +28,7 @@ class HttpServer {
 	@Value("http.port")
 	private int port = 80;
 
-	public void start() {
+	void start() {
 		import std.stdio, std.conv;
 		writeln("Started server on port " ~ port.to!string);
 	}

@@ -10,28 +10,28 @@ import poodinis.valueinjector.properd;
 import properd;
 import std.exception;
 
-version(unittest) {
+version (unittest) {
 
     class Config {
         @Value("number")
-        public int number;
+        int number;
 
         @Value("floatyNumber")
-        public float floatyNumber;
+        float floatyNumber;
 
         @Value("text")
-        public string text = "This text is overwritten";
+        string text = "This text is overwritten";
 
         @Value("boolean")
-        public bool boolean;
+        bool boolean;
 
         @Value("doesnotexist")
-        public int notThere = 8877;
+        int notThere = 8877;
     }
 
     class MissingConfig {
         @MandatoryValue("doesnotexist")
-        public int number;
+        int number;
     }
 
     private string propertyText = `
